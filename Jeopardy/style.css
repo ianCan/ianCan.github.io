@@ -19,6 +19,10 @@ body {
     font-size: 50px;
     cursor: pointer;
 }
+.black{
+    background-color: black;
+    /*decided to make a it add a class for each time its clicked instead of a function Will try to add later*/
+}
 
 #modal {
 	background-color: rgba(0, 0, 0, 0.4);
@@ -29,7 +33,7 @@ body {
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
-	/* display: none; */
+	display: none;
 }
 #modal-textbox {
 	background-color: white;
