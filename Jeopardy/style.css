@@ -19,12 +19,18 @@ body {
     font-size: 50px;
     cursor: pointer;
 }
+.category {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+}
 .black{
     background-color: black;
-    /*decided to make a it add a class for each time its clicked instead of a function Will try to add later*/
 }
 
-#modal {
+#modal, #modalTwo {
 	background-color: rgba(0, 0, 0, 0.4);
 	position: fixed;
 	top: 0;

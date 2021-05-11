@@ -14,47 +14,53 @@
 <body>
     <h1 class="gameTitle">Jeopardy</h1>
     <div class="container">
-        <div data-cell-index="0" class="box"><a class="csn-modal" data-modal-id="modal-textbox" href="#">Math</a></div>
-        <div data-cell-index="1" class="box">Money</div>
-        <div data-cell-index="2" class="box">Anime</div>
-        <div data-cell-index="3" class="box">Food</div>
-        <div data-cell-index="4" class="box">100</div>
-        <div data-cell-index="5" class="box">100</div>
-        <div data-cell-index="6" class="box">100</div>
-        <div data-cell-index="7" class="box">100</div>
-        <div data-cell-index="8" class="box">200</div>
-        <div data-cell-index="9" class="box">200</div>
-        <div data-cell-index="10" class="box">200</div>
-        <div data-cell-index="11" class="box">200</div>
-        <div data-cell-index="12" class="box">300</div>
-        <div data-cell-index="13" class="box">300</div>
-        <div data-cell-index="14" class="box">300</div>
-        <div data-cell-index="15" class="box">300</div>
-        <div data-cell-index="16" class="box">400</div>
-        <div data-cell-index="17" class="box">400</div>
-        <div data-cell-index="18" class="box">400</div>
-        <div data-cell-index="19" class="box">400</div>
-        <div data-cell-index="20" class="box">500</div>
-        <div data-cell-index="21" class="box">500</div>
-        <div data-cell-index="22" class="box">500</div>
-        <div data-cell-index="23" class="box">500</div>
+        <div class="category">Money</div>
+        <div class="category">Math</div>
+        <div class="category">Anime</div>
+        <div class="category">Food</div>
+        <div id="openModal" class="box">100</div>
+        <div id="openMoneyModal" class="box">100</div>
+        <div class="box">100</div>
+        <div class="box">100</div>
+        <div class="box">200</div>
+        <div class="box">200</div>
+        <div class="box">200</div>
+        <div class="box">200</div>
+        <div class="box">300</div>
+        <div class="box">300</div>
+        <div class="box">300</div>
+        <div class="box">300</div>
+        <div class="box">400</div>
+        <div class="box">400</div>
+        <div class="box">400</div>
+        <div class="box">400</div>
+        <div class="box">500</div>
+        <div class="box">500</div>
+        <div class="box">500</div>
+        <div class="box">500</div>
     </div>
     <h2 class="status"></h2>
-    <button id="openModal">About the Game</button>
     <div id="modal">
         <div id="modal-textbox">
             <h1>Learn to Play Bridge</h1>
             <p>Bridge is played with four people sitting at a card table using a standard deck of 52 cards (no jokers).
+            <div id="modal-footer">
+                <a class="close" href="#">Close</a>
+            </div>
+        </div>
+    </div>
+    <div id="modalTwo">
+        <div id="modal-textbox">
+            <h1>Learn to Play Bridge</h1>
+            <p>Bridge is played with four people sitting at a card table using a standard deck of 52 cards (no
+                jokers).
                 The
                 players across from each other form partnerships as North‑South and East‑West.</p>
-            <p>Draw cards to select the person to deal the cards (the dealer). This person distributes the cards face
-                down, in
-                clockwise rotation one at a time, until each player at the table has a hand consisting of 13 cards. </p>
-            <p>After the play of each deal is completed, the opportunity to deal moves around the table clockwise so
-                that each
-                person has a turn to deal out the cards.</p>
             <div id="modal-footer">
-                <a id="close" href="#">Close</a>
+                <a class="close" href="#">Close</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
