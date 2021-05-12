@@ -18,82 +18,50 @@ blackOut.forEach((box) => {
 
 
 let datamap = new Map([
-    [document.getElementById("openModal"), document.getElementById("modal")],
-    [document.getElementById("openMoneyModal"), document.getElementById("modalTwo")],
+    [document.getElementById("money100"), document.getElementById("moneyModal100")],
+    [document.getElementById("math100"), document.getElementById("mathModal100")],
+    [document.getElementById("anime100"), document.getElementById("animeModal100")],
+    [document.getElementById("food100"), document.getElementById("foodModal100")],
+    [document.getElementById("money200"), document.getElementById("moneyModal200")],
+    [document.getElementById("math200"), document.getElementById("mathModal200")],
+    [document.getElementById("anime200"), document.getElementById("animeModal200")],
+    [document.getElementById("food200"), document.getElementById("foodModal200")],
+    [document.getElementById("money300"), document.getElementById("moneyModal300")],
+    [document.getElementById("math300"), document.getElementById("mathModal300")],
+    [document.getElementById("anime300"), document.getElementById("animeModal300")],
+    [document.getElementById("food300"), document.getElementById("foodModal300")],
+    [document.getElementById("money400"), document.getElementById("moneyModal400")],
+    [document.getElementById("math400"), document.getElementById("mathModal400")],
+    [document.getElementById("anime400"), document.getElementById("animeModal400")],
+    [document.getElementById("food400"), document.getElementById("foodModal400")],
+    [document.getElementById("money500"), document.getElementById("moneyModal500")],
+    [document.getElementById("math500"), document.getElementById("mathModal500")],
+    [document.getElementById("anime500"), document.getElementById("animeModal500")],
+    [document.getElementById("food500"), document.getElementById("foodModal500")],
 ]);
 
 datamap.forEach((value, key) => {
     doModal(key, value);
-    console.log(value, key)
+
 });
 
-function doModal(anchor, popupbox) {
+function doModal(anchor, modal) {
 
-    // Get the <span> element that closes the modal
-    let close = popupbox.getElementsByClassName("close")[0];
+    let close = modal.getElementsByClassName("close")[0];
 
     anchor.addEventListener("click", function (event) {
-        popupbox.style.display = "block";
+        modal.style.display = "block";
     });
 
     close.addEventListener("click", function (event) {
-        popupbox.style.display = "none";
+        modal.style.display = "none";
     });
 
     window.addEventListener("click", function (event) {
-        if (event.target == popupbox) {
-            popupbox.style.display = "none";
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
     });
 }
 //https://stackoverflow.com/a/66301243
 //Used this solution and im getting an error but it still works
-
-
-// let openBtn = document.querySelector('#openModal');
-// let openBtn = document.querySelector('#openMoneyModal');
-//maybe try a if loop
-//working on adding these adding modals and how to not use so much
-// let modal = {
-//     a: document.querySelector('#modal'),
-//     b: document.querySelector("#modalTwo")
-// }
-
-
-// const openModal = {
-//     a: modal.a.style.display = 'block',
-//     b: modal.b.style.display = 'block',
-// };
-
-// const closeBtn = document.querySelector('#close');
-
-// const closeModal = () => {
-//     modal.a.style.display = 'none'
-//     modal.b.style.display = 'none'
-// };
-
-// math100.id.addEventListener('click', openModal.a);
-
-// math200.id.addEventListener('click', openModal.b);
-
-// closeBtn.addEventListener('click', closeModal);
-
-
-// document.querySelectorAll('.box').forEach((box) => {
-
-//     box.addEventListener('click', (event) => {
-//         event.currentTarget.classList.toggle('card-back');
-//         playHand(event);
-//     });
-
-// });
-
-//I will use this to show the code i was going with but decided the change
-
-// for (let i = 0; i < blackOut.length; i++) {
-//     blackOut[i].addEventListener('click', (box) => {
-//         box.currentTarget.style.backgroundColor = 'black'
-//     });
-// }
-//https://www.thiscodeworks.com/add-event-listener-to-multiple-buttons-with-the-same-class-javascript/5efa75c76c23bc0014be6336
-//used this to help me figure out how to add a click event to all boxes

@@ -6,7 +6,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    width: 700px;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -30,7 +30,11 @@ body {
     background-color: black;
 }
 
-#modal, #modalTwo {
+#moneyModal100, #mathModal100, #animeModal100, #foodModal100, 
+#moneyModal200, #mathModal200, #animeModal200, #foodModal200,
+#moneyModal300, #mathModal300, #animeModal300, #foodModal300, 
+#moneyModal400, #mathModal400, #animeModal400, #foodModal400, 
+#moneyModal500, #mathModal500, #animeModal500, #foodModal500{
 	background-color: rgba(0, 0, 0, 0.4);
 	position: fixed;
 	top: 0;
@@ -40,6 +44,9 @@ body {
 	z-index: 1;
 	overflow: auto;
 	display: none;
+}
+.modalTitle{
+    line-height: 36px;
 }
 #modal-textbox {
 	background-color: white;
@@ -52,6 +59,13 @@ body {
 	line-height: 120%;
 	font-family: Arial, Helvetica, sans-serif;
 }
-#modal-footer{
-	text-align: right;
+p{
+    font-size: 2rem;
+    height: 150px;
+    line-height: 36px;
+}
+h3 {
+    cursor: pointer;
+    display: inline;
+    margin: 20px;
 }
