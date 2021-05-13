@@ -8,14 +8,16 @@ Make a way for it to tell if a queston was right
 Make a win condition and a lose condition
 Display if you own or lost
 */
-const blackOut = document.querySelectorAll(".box");
+const gameStatus = document.querySelector('.status');
 
-blackOut.forEach((box) => {
-    box.addEventListener('click', (event) => {
-        event.currentTarget.classList.toggle('black');
-    });
-});
+let gameActive = true;
 
+const winningMessage = () => 'Congrats you WONN!';
+const losingMessage = () => 'Game Over. Better luck next time';
+
+const answers = () => {
+
+};
 
 let datamap = new Map([
     [document.getElementById("money100"), document.getElementById("moneyModal100")],
@@ -62,6 +64,14 @@ function doModal(anchor, modal) {
             modal.style.display = "none";
         }
     });
-}
+};
 //https://stackoverflow.com/a/66301243
 //Used this solution and im getting an error but it still works
+
+const blackOut = document.querySelectorAll(".box");
+
+blackOut.forEach((box) => {
+    box.addEventListener('click', (event) => {
+        event.currentTarget.classList.toggle('black');
+    });
+});
