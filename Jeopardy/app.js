@@ -10,22 +10,26 @@ Display if you own or lost
 */
 const gameStatus = document.querySelector('.status');
 
-let gameActive = true;
+// let gameActive = true;
 
 const correctAnswer = document.querySelectorAll(".close");
 const wrongAnswer = document.querySelectorAll(".wrong");
-const winningMessage = 'Congrats you WONN!';
-const losingMessage = () => 'Game Over. Better luck next time';
+const winningMessage = () => "CORRECT!! If not contine answering questions. If all boxes are black you've won.";
+const losingMessage = () => 'Wrong answer. Game Over. Please wait for game to restart.';
 
-const answers = () => {
-    let correct = false;
-    if (correct) {
-        correctAnswer.addEventListener('click', function () {
-            console.log(winningMessage())
-        })
+// const refresh = location.reload();
 
-    }
-};
+for (let i = 0; i < correctAnswer.length; i++)
+    correctAnswer[i].addEventListener('click', event => {
+        gameStatus.innerHTML = winningMessage();
+    });
+for (let i = 0; i < wrongAnswer.length; i++)
+    wrongAnswer[i].addEventListener('click', event => {
+        gameStatus.innerHTML = losingMessage();
+        setTimeout(() => {
+            location.reload();
+        }, 3000)
+    });
 
 let datamap = new Map([
     [document.getElementById("money100"), document.getElementById("moneyModal100")],
@@ -58,12 +62,17 @@ datamap.forEach((value, key) => {
 function doModal(anchor, modal) {
 
     let close = modal.getElementsByClassName("close")[0];
+    let wrongClose = modal.getElementsByClassName("wrong")[0];
 
     anchor.addEventListener("click", function (event) {
         modal.style.display = "block";
     });
 
     close.addEventListener("click", function (event) {
+        modal.style.display = "none";
+    });
+
+    wrongClose.addEventListener("click", function (event) {
         modal.style.display = "none";
     });
 
