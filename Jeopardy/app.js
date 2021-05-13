@@ -10,14 +10,10 @@ Display if you own or lost
 */
 const gameStatus = document.querySelector('.status');
 
-// let gameActive = true;
-
 const correctAnswer = document.querySelectorAll(".close");
 const wrongAnswer = document.querySelectorAll(".wrong");
 const winningMessage = () => "CORRECT!! If not contine answering questions. If all boxes are black you've won.";
 const losingMessage = () => 'Wrong answer. Game Over. Please wait for game to restart.';
-
-// const refresh = location.reload();
 
 for (let i = 0; i < correctAnswer.length; i++)
     correctAnswer[i].addEventListener('click', event => {
