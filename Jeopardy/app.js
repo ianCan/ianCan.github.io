@@ -12,11 +12,19 @@ const gameStatus = document.querySelector('.status');
 
 let gameActive = true;
 
-const winningMessage = () => 'Congrats you WONN!';
+const correctAnswer = document.querySelectorAll(".close");
+const wrongAnswer = document.querySelectorAll(".wrong");
+const winningMessage = 'Congrats you WONN!';
 const losingMessage = () => 'Game Over. Better luck next time';
 
 const answers = () => {
+    let correct = false;
+    if (correct) {
+        correctAnswer.addEventListener('click', function () {
+            console.log(winningMessage())
+        })
 
+    }
 };
 
 let datamap = new Map([
